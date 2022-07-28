@@ -14,3 +14,42 @@
   border: none;
   color: white;
 }
+.share-btn {
+  width: 42px;
+  height: 36px;
+  background-color: #edeef0;
+  border: none;
+  border-radius: 2px;
+}
+.text-other {
+  color: #02b875;
+}
+.text-other:hover {
+  color: #02b875;
+}
+.menu-dropdown {
+  transform: translateX(-110px);
+  width: 160px;
+  height: 106px;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.menu-dropdown li {
+  list-style: none;
+  padding: 4px 6px;
+  text-align: left;
+  cursor: pointer;
+}
+.menu-dropdown li:hover {
+  background-color: gray;
+}
+.menu-dropdown li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+}
+.menu-dropdown li a:hover {
+  color: #fff;
+}
