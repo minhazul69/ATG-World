@@ -208,6 +208,11 @@ const AllPost = () => {
                     {post.postMessage}
                   </h5>
                 )}
+
+                {/* POST NOW BUTTON */}
+                <a href="" id="post-now">
+                  <i class="fa-solid fa-pen"></i>
+                </a>
                 <div className="pt-4 pb-1 d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <img src={post.postUserImg} className="img-fluid" alt="" />
