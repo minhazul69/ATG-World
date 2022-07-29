@@ -21,6 +21,9 @@
   border: none;
   border-radius: 2px;
 }
+.filter-btn {
+  background-color: #edeef0;
+}
 .text-other {
   color: #02b875;
 }
@@ -52,4 +55,12 @@
 }
 .menu-dropdown li a:hover {
   color: #fff;
+}
+@media screen and (max-width: 468px) {
+  .post-title {
+    font-size: 17px;
+  }
+  .post-message {
+    font-size: 16px;
+  }
 }

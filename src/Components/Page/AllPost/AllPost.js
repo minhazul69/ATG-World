@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavDropdown } from "react-bootstrap";
 import "./AllPost.css";
 const allPost = [
   {
@@ -51,8 +52,22 @@ const allPost = [
 const AllPost = () => {
   const [show, setShow] = useState(false);
   return (
-    <div className="container px-4">
-      <div className="row">
+    <div className="container px-lg-4">
+      <div className="row p-md-0">
+        <div className="">
+          <div className="d-flex align-items-center justify-content-between p-3">
+            <div>
+              <a className="nav-link fw-bold fs-6" href="">
+                Posts(368)
+              </a>
+            </div>
+            <div>
+              <button className="filter-btn btn border-0">
+                Filter:All <i class="fa-solid fa-caret-down ps-3"></i>
+              </button>
+            </div>
+          </div>
+        </div>
         <div className="d-none d-lg-block">
           <div className="d-flex align-items-center justify-content-between pt-4 ">
             <ul className="nav">
@@ -104,7 +119,7 @@ const AllPost = () => {
               <div class="card-body">
                 <h5 class="card-title fs-4 my-3">{post.postType}</h5>
                 <div className="d-flex justify-content-between">
-                  <h3 className=" fw-bold">{post.postTitle}</h3>
+                  <h3 className="post-title fw-bold">{post.postTitle}</h3>
                   <div className="px-2 position-relative">
                     <button
                       onClick={() => setShow(!show)}
@@ -134,14 +149,23 @@ const AllPost = () => {
                     </h6>
                   )}
                   {post.postCompany && (
-                    <h6 className="me-5">
-                      <i class="fa-solid fa-briefcase me-1"></i>
-                      {post.postCompany}
+                    <>
+                      <h6 className="me-5 d-lg-none">
+                        <i class="fa-solid fa-briefcase me-1"></i>
+                        {post.postCompany.slice(0, 20) + "..."}
+                      </h6>
+                      <h6 className="me-5 d-none d-lg-block">
+                        <i class="fa-solid fa-briefcase me-1"></i>
+                        {post.postCompany}
+                      </h6>
+                    </>
+                  )}
+                  {post.postLocation && (
+                    <h6>
+                      <i class="fa-solid fa-location-dot"></i>{" "}
+                      {post.postLocation}
                     </h6>
                   )}
-                  <h6>
-                    <i class="fa-solid fa-location-dot"></i> {post.postLocation}
-                  </h6>
                 </div>
                 {post.button && (
                   <div>
@@ -158,18 +182,21 @@ const AllPost = () => {
                   </div>
                 )}
                 {post.postMessage && (
-                  <p class="card-text fs-5 text-secondary my-1">
+                  <h5 class=" card-text post-message text-secondary my-1">
                     {post.postMessage}
-                  </p>
+                  </h5>
                 )}
                 <div className="pt-4 pb-1 d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <img src={post.postUserImg} className="img-fluid" alt="" />
-                    <h5 className="ms-2 fw-bold">{post.postUserName}</h5>
+                    <div className="ms-2">
+                      <h5 className=" fw-bold">{post.postUserName}</h5>
+                      <p className="p-0 m-0 d-lg-none">{post.postView}</p>
+                    </div>
                   </div>
 
                   <div className="d-flex align-items-center ">
-                    <div>
+                    <div className="d-none d-lg-block">
                       <i class="fa-solid fa-eye me-2"></i> {post.postView}
                     </div>
                     <button className="share-btn ms-5 me-2">
