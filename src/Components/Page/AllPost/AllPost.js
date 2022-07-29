@@ -49,6 +49,28 @@ const allPost = [
     button: "Apply on Timesjobs",
   },
 ];
+const fakeGroupData = [
+  {
+    _id: 1,
+    groupImg: "https://i.ibb.co/LRNsZNc/Rectangle-6.png",
+    groupName: "Leisure",
+  },
+  {
+    _id: 2,
+    groupImg: "https://i.ibb.co/HHNN5kQ/Rectangle-6-2.png",
+    groupName: "Activism",
+  },
+  {
+    _id: 3,
+    groupImg: "https://i.ibb.co/Zh9m9Z2/Rectangle-6-3.png",
+    groupName: "MBA",
+  },
+  {
+    _id: 4,
+    groupImg: "https://i.ibb.co/zxjgK04/Rectangle-6-2.png",
+    groupName: "Philosophy",
+  },
+];
 const AllPost = () => {
   const [show, setShow] = useState(false);
   return (
@@ -208,7 +230,58 @@ const AllPost = () => {
             </div>
           ))}
         </div>
-        <div className="col-md-4"></div>
+        <div className="col-md-4 ps-5 d-none d-lg-block">
+          <div className="d-flex align-items-center justify-content-between mt-5">
+            <div>
+              <h5>
+                <i class="fa-solid fa-location-dot"></i> Noida, India
+              </h5>
+            </div>
+            <div>
+              <i class="fa-solid fa-pen"></i>
+            </div>
+          </div>
+          <div>
+            <hr />
+          </div>
+          <div className="d-flex mt-5">
+            <div className="me-2">
+              <i class="fa-solid fa-circle-info text-secondary"></i>
+            </div>
+            <div>
+              <p className="m-0 text-secondary">
+                Your location will help us serve better and extend a
+                personalised experience.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h5 className="mt-5">
+              <i class="fa-solid fa-thumbs-up"></i> REcommended Groups
+            </h5>
+            <div className="mt-3">
+              {fakeGroupData.map((group) => (
+                <div
+                  key={group._id}
+                  className="d-flex align-items-center justify-content-between mt-4"
+                >
+                  <div className="d-flex align-items-center">
+                    <img src={group.groupImg} className="img-fluid" alt="" />
+                    <h5 className="ms-3">{group.groupName}</h5>
+                  </div>
+                  <div>
+                    <button className=" follow-btn">Follow</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-end mt-5">
+              <a className="text-decoration-none" href="">
+                See More...
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

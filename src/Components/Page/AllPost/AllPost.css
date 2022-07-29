@@ -56,6 +56,12 @@
 .menu-dropdown li a:hover {
   color: #fff;
 }
+.follow-btn {
+  background-color: #edeef0;
+  border-radius: 30px;
+  border: none;
+  padding: 3px 14px;
+}
 @media screen and (max-width: 468px) {
   .post-title {
     font-size: 17px;
