@@ -213,6 +213,75 @@ const AllPost = () => {
                 <a href="" id="post-now">
                   <i class="fa-solid fa-pen"></i>
                 </a>
+
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header modal-bg">
+                        <h5 class=" b" id="exampleModalLabel">
+                          Let's learn, share & inspire each other with our
+                          passion for computer engineering. Sign up now 🤘🏼
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Nemo distinctio laboriosam ea soluta officia
+                              quidem est expedita. Quia, ullam totam veritatis
+                              praesentium quaerat laudantium impedit ab quas,
+                              voluptatem numquam animi deleniti eveniet
+                              molestias mollitia id quod! Molestias sequi
+                              voluptate fugit laudantium odit est provident ab.
+                              Molestiae iure tempora corporis doloribus quam
+                              culpa animi, eum ipsum, eaque quia neque, fugit
+                              odio dolorum ullam officia reprehenderit nihil.
+                              Nobis voluptate iste laudantium ipsa laborum! Non
+                              quo, doloremque nobis porro blanditiis culpa
+                              accusantium repellendus enim autem in itaque sint
+                              voluptatibus optio vel, sit ducimus ipsum magni
+                              est fugiat reprehenderit corporis consequuntur
+                              voluptatum a. Tenetur?
+                            </p>
+                          </div>
+                          <div className="col-md-6">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Beatae officiis cum repellat. In, quos
+                              dolorum quae sapiente vel, provident iusto esse,
+                              delectus rem quidem temporibus earum ipsa? Totam
+                              alias non accusamus aspernatur inventore quas
+                              soluta, nisi ipsum mollitia vel libero, facilis
+                              consequuntur sint, perferendis debitis veritatis
+                              qui facere et? Rerum sunt, dolorum laboriosam
+                              culpa, reprehenderit autem doloribus repellat
+                              tempora voluptatem similique necessitatibus in
+                              iste consequuntur! Eveniet, sequi hic est a totam
+                              labore laudantium modi excepturi neque
+                              exercitationem quam sunt dolorum doloribus quis
+                              rem accusamus harum. Odio debitis provident et in
+                              enim laboriosam mollitia. Iure sequi sapiente
+                              repudiandae ut autem voluptas.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="pt-4 pb-1 d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <img src={post.postUserImg} className="img-fluid" alt="" />
