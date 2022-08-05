@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { NavDropdown } from "react-bootstrap";
+import facebookLogo from "../../../Image/f_logo_RGB-Blue_1024.png";
+import googleLogo from "../../../Image/google.svg";
 import "./AllPost.css";
 const allPost = [
   {
@@ -238,43 +239,98 @@ const AllPost = () => {
                       <div class="modal-body">
                         <div className="row">
                           <div className="col-md-6">
-                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Nemo distinctio laboriosam ea soluta officia
-                              quidem est expedita. Quia, ullam totam veritatis
-                              praesentium quaerat laudantium impedit ab quas,
-                              voluptatem numquam animi deleniti eveniet
-                              molestias mollitia id quod! Molestias sequi
-                              voluptate fugit laudantium odit est provident ab.
-                              Molestiae iure tempora corporis doloribus quam
-                              culpa animi, eum ipsum, eaque quia neque, fugit
-                              odio dolorum ullam officia reprehenderit nihil.
-                              Nobis voluptate iste laudantium ipsa laborum! Non
-                              quo, doloremque nobis porro blanditiis culpa
-                              accusantium repellendus enim autem in itaque sint
-                              voluptatibus optio vel, sit ducimus ipsum magni
-                              est fugiat reprehenderit corporis consequuntur
-                              voluptatum a. Tenetur?
-                            </p>
+                            <h4 className="font-weight-bold mb-4">
+                              Create Account
+                            </h4>
+                            <form action="#">
+                              <div class="input-group mb-3">
+                                <input
+                                  type="text"
+                                  class="form-control shadow-none"
+                                  placeholder="First Name"
+                                  aria-label="Username"
+                                />
+                                <input
+                                  type="text"
+                                  class="form-control shadow-none"
+                                  placeholder="Last Name"
+                                  aria-label="Server "
+                                />
+                              </div>
+                              <input
+                                type="text"
+                                class="form-control shadow-none"
+                                placeholder="Email"
+                                aria-label="Server"
+                              />
+                              <input
+                                type="text"
+                                class="form-control shadow-none mt-2"
+                                placeholder="Password"
+                                aria-label="Server"
+                              />
+
+                              <input
+                                type="text"
+                                class="form-control shadow-none mt-2"
+                                placeholder="Confirm Password"
+                                aria-label="Server"
+                              />
+
+                              <button
+                                class="btn btn-primary w-100 mt-2 rounded-pill py-2"
+                                type="button"
+                              >
+                                Create Account
+                              </button>
+                              <br />
+                              <div className="mt-3">
+                                <button
+                                  type="button"
+                                  class="btn btn-light w-100 border"
+                                >
+                                  <img
+                                    src={facebookLogo}
+                                    style={{ width: "25px", height: "25px" }}
+                                    className="img-fluid"
+                                    alt=""
+                                  />{" "}
+                                  Sign Up With Facebook
+                                </button>
+                                <br />
+                                <button
+                                  type="button w-100"
+                                  class="btn btn-light  w-100 mt-2 border"
+                                >
+                                  <img
+                                    style={{ width: "25px", height: "25px" }}
+                                    src={googleLogo}
+                                    className="img-fluid"
+                                    alt=""
+                                  />{" "}
+                                  Sign Up With Facebook
+                                </button>
+                              </div>
+                            </form>
                           </div>
                           <div className="col-md-6">
-                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Beatae officiis cum repellat. In, quos
-                              dolorum quae sapiente vel, provident iusto esse,
-                              delectus rem quidem temporibus earum ipsa? Totam
-                              alias non accusamus aspernatur inventore quas
-                              soluta, nisi ipsum mollitia vel libero, facilis
-                              consequuntur sint, perferendis debitis veritatis
-                              qui facere et? Rerum sunt, dolorum laboriosam
-                              culpa, reprehenderit autem doloribus repellat
-                              tempora voluptatem similique necessitatibus in
-                              iste consequuntur! Eveniet, sequi hic est a totam
-                              labore laudantium modi excepturi neque
-                              exercitationem quam sunt dolorum doloribus quis
-                              rem accusamus harum. Odio debitis provident et in
-                              enim laboriosam mollitia. Iure sequi sapiente
-                              repudiandae ut autem voluptas.
+                            <p
+                              style={{
+                                fontSize: "13px",
+                                textAlign: "right",
+                                marginRight: "20px",
+                              }}
+                            >
+                              Already have an account? <a href="#">Sign In</a>
+                            </p>
+                            <img
+                              src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?w=740&t=st=1659710327~exp=1659710927~hmac=61c9618e3381ffe9a9d6ce52cda28050bfa8491f09ebf3feb7a2631cdafac674"
+                              className="img-fluid"
+                              alt=""
+                            />
+                            <p style={{ fontSize: "11px" }}>
+                              By signing up, you agree to our Terms &
+                              conditions, Privacy policy
                             </p>
                           </div>
                         </div>
