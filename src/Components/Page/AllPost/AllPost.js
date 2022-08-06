@@ -225,10 +225,12 @@ const AllPost = () => {
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                       <div class="modal-header modal-bg">
-                        <h5 class=" b" id="exampleModalLabel">
-                          Let's learn, share & inspire each other with our
-                          passion for computer engineering. Sign up now 🤘🏼
-                        </h5>
+                        <div className="mx-auto">
+                          <h5 class=" b" id="exampleModalLabel">
+                            Let's learn, share & inspire each other with our
+                            passion for computer engineering. Sign up now 🤘🏼
+                          </h5>
+                        </div>
                         <button
                           type="button"
                           class="btn-close"
