@@ -13,7 +13,7 @@ const Navbar = () => {
           className="d-none d-lg-block"
         >
           <form action="#" method="POST">
-            <div class="button-input position-relative ">
+            <div className="button-input position-relative ">
               <input
                 style={{ borderRadius: "37px", width: "140%" }}
                 type="search"
@@ -22,7 +22,7 @@ const Navbar = () => {
               />
               <i
                 style={{ top: "22px", left: "23px" }}
-                class="fa-solid fa-magnifying-glass position-absolute translate-middle"
+                className="fa-solid fa-magnifying-glass position-absolute translate-middle"
               ></i>
             </div>
           </form>
@@ -34,7 +34,7 @@ const Navbar = () => {
             data-bs-target="#signUpModal"
           >
             Create account. <a href="#"> It’s free!</a>{" "}
-            <i class="fa-solid fa-caret-down"></i>
+            <i className="fa-solid fa-caret-down"></i>
           </h6>
         </div>
       </div>

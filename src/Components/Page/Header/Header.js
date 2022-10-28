@@ -3,11 +3,11 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div class="header-section">
+    <div className="header-section">
       <div className=" d-lg-none">
         <div className="d-flex align-items-center justify-content-between px-4 py-3">
           <div>
-            <i class="fa-solid fa-arrow-left fs-4 text-white"></i>
+            <i className="fa-solid fa-arrow-left fs-4 text-white"></i>
           </div>
           <div>
             <button className="btn text-white border border-white">

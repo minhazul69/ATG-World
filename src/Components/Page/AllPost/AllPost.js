@@ -86,7 +86,7 @@ const AllPost = () => {
             </div>
             <div>
               <button className="filter-btn btn border-0">
-                Filter:All <i class="fa-solid fa-caret-down ps-3"></i>
+                Filter:All <i className="fa-solid fa-caret-down ps-3"></i>
               </button>
             </div>
           </div>
@@ -122,10 +122,10 @@ const AllPost = () => {
             </ul>
             <div className="pb-2">
               <button className=" me-3 btn-post">
-                Write a Post <i class="fa-solid fa-caret-down ps-2"></i>
+                Write a Post <i className="fa-solid fa-caret-down ps-2"></i>
               </button>
               <button className=" btn-join">
-                +<i class="fa-solid fa-user-group "></i> Join Group
+                +<i className="fa-solid fa-user-group "></i> Join Group
               </button>
             </div>
           </div>
@@ -135,12 +135,12 @@ const AllPost = () => {
         </div>
         <div className="col-md-8">
           {allPost.map((post) => (
-            <div class="card mt-3" key={post._id}>
+            <div className="card mt-3" key={post._id}>
               {post.postImg && (
-                <img src={post.postImg} class="card-img-top" alt="..." />
+                <img src={post.postImg} className="card-img-top" alt="..." />
               )}
-              <div class="card-body">
-                <h5 class="card-title fs-4 my-3">{post.postType}</h5>
+              <div className="card-body">
+                <h5 className="card-title fs-4 my-3">{post.postType}</h5>
                 <div className="d-flex justify-content-between">
                   <h3 className="post-title fw-bold">{post.postTitle}</h3>
                   <div className="px-2 position-relative">
@@ -148,7 +148,7 @@ const AllPost = () => {
                       onClick={() => setShow(!show)}
                       className="btn border-0 "
                     >
-                      <i class="fa-solid fa-ellipsis fs-3"></i>
+                      <i className="fa-solid fa-ellipsis fs-3"></i>
                     </button>
                     {show && (
                       <ul className="menu-dropdown position-absolute shadow ">
@@ -168,24 +168,25 @@ const AllPost = () => {
                 <div className="d-flex align-items-center my-2">
                   {post.postDate && (
                     <h6 className="me-5">
-                      <i class="fa-solid fa-calendar-day"></i> {post.postDate}
+                      <i className="fa-solid fa-calendar-day"></i>{" "}
+                      {post.postDate}
                     </h6>
                   )}
                   {post.postCompany && (
                     <>
                       <h6 className="me-5 d-lg-none">
-                        <i class="fa-solid fa-briefcase me-1"></i>
+                        <i className="fa-solid fa-briefcase me-1"></i>
                         {post.postCompany.slice(0, 20) + "..."}
                       </h6>
                       <h6 className="me-5 d-none d-lg-block">
-                        <i class="fa-solid fa-briefcase me-1"></i>
+                        <i className="fa-solid fa-briefcase me-1"></i>
                         {post.postCompany}
                       </h6>
                     </>
                   )}
                   {post.postLocation && (
                     <h6>
-                      <i class="fa-solid fa-location-dot"></i>{" "}
+                      <i className="fa-solid fa-location-dot"></i>{" "}
                       {post.postLocation}
                     </h6>
                   )}
@@ -205,36 +206,36 @@ const AllPost = () => {
                   </div>
                 )}
                 {post.postMessage && (
-                  <h5 class=" card-text post-message text-secondary my-1">
+                  <h5 className=" card-text post-message text-secondary my-1">
                     {post.postMessage}
                   </h5>
                 )}
 
                 {/* POST NOW BUTTON */}
                 <a href="" id="post-now">
-                  <i class="fa-solid fa-pen"></i>
+                  <i className="fa-solid fa-pen"></i>
                 </a>
                 {/* SIGN UP MODAL */}
                 <div
-                  class="modal fade"
+                  className="modal fade"
                   id="signUpModal"
                   tabindex="-1"
                   aria-labelledby="signUpModalLabel"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div className="modal-dialog modal-dialog-centered modal-lg">
                     <SignUp />
                   </div>
                 </div>
                 {/* SIGN IN MODAL */}
                 <div
-                  class="modal fade"
+                  className="modal fade"
                   id="signInModal"
                   tabindex="-1"
                   aria-labelledby="signInModalLabel"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div className="modal-dialog modal-dialog-centered modal-lg">
                     <SignIn />
                   </div>
                 </div>
@@ -250,10 +251,10 @@ const AllPost = () => {
 
                   <div className="d-flex align-items-center ">
                     <div className="d-none d-lg-block">
-                      <i class="fa-solid fa-eye me-2"></i> {post.postView}
+                      <i className="fa-solid fa-eye me-2"></i> {post.postView}
                     </div>
                     <button className="share-btn ms-5 me-2">
-                      <i class="fa-solid fa-share-nodes"></i>
+                      <i className="fa-solid fa-share-nodes"></i>
                     </button>
                   </div>
                 </div>
@@ -265,11 +266,11 @@ const AllPost = () => {
           <div className="d-flex align-items-center justify-content-between mt-5">
             <div>
               <h5>
-                <i class="fa-solid fa-location-dot"></i> Noida, India
+                <i className="fa-solid fa-location-dot"></i> Noida, India
               </h5>
             </div>
             <div>
-              <i class="fa-solid fa-pen"></i>
+              <i className="fa-solid fa-pen"></i>
             </div>
           </div>
           <div>
@@ -277,7 +278,7 @@ const AllPost = () => {
           </div>
           <div className="d-flex mt-5">
             <div className="me-2">
-              <i class="fa-solid fa-circle-info text-secondary"></i>
+              <i className="fa-solid fa-circle-info text-secondary"></i>
             </div>
             <div>
               <p className="m-0 text-secondary">
@@ -288,7 +289,7 @@ const AllPost = () => {
           </div>
           <div>
             <h5 className="mt-5">
-              <i class="fa-solid fa-thumbs-up"></i> REcommended Groups
+              <i className="fa-solid fa-thumbs-up"></i> REcommended Groups
             </h5>
             <div className="mt-3">
               {fakeGroupData.map((group) => (
