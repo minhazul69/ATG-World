@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import facebookLogo from "../../../Image/f_logo_RGB-Blue_1024.png";
+import googleLogo from "../../../Image/google.svg";
+import loginImg from "../../../Image/login-img.png";
 
 const SignUp = () => {
   return (
@@ -23,42 +25,47 @@ const SignUp = () => {
           <div className="col-md-6">
             <h4 className="font-weight-bold mb-4">Create Account</h4>
             <form action="#">
-              <div class="input-group mb-3">
+              <div class="input-group">
                 <input
                   type="text"
-                  class="form-control shadow-none"
+                  class="form-control shadow-none rounded-0"
                   placeholder="First Name"
                   aria-label="Username"
                 />
                 <input
                   type="text"
-                  class="form-control shadow-none"
+                  class="form-control shadow-none rounded-0"
                   placeholder="Last Name"
                   aria-label="Server "
                 />
               </div>
               <input
                 type="text"
-                class="form-control shadow-none"
+                class="form-control shadow-none rounded-0"
                 placeholder="Email"
                 aria-label="Server"
               />
+              <div className="position-relative">
+                <input
+                  className="form-control shadow-none rounded-0"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <i
+                  style={{ top: 20, right: 25, transform: "translateY(-50%)" }}
+                  className="fa-solid fa-eye swap-off position-absolute d-block "
+                ></i>
+              </div>
               <input
-                type="text"
-                class="form-control shadow-none mt-2"
-                placeholder="Password"
-                aria-label="Server"
-              />
-
-              <input
-                type="text"
-                class="form-control shadow-none mt-2"
+                type="password"
+                class="form-control shadow-none rounded-0"
                 placeholder="Confirm Password"
                 aria-label="Server"
               />
 
               <button
-                class="btn btn-primary w-100 mt-2 rounded-pill py-2"
+                class="btn btn-primary w-100 mt-3 rounded-pill py-2"
                 type="button"
               >
                 Create Account
@@ -67,7 +74,7 @@ const SignUp = () => {
               <div className="mt-3">
                 <button type="button" class="btn btn-light w-100 border">
                   <img
-                    // src={facebookLogo}
+                    src={facebookLogo}
                     style={{ width: "25px", height: "25px" }}
                     className="img-fluid"
                     alt=""
@@ -81,7 +88,7 @@ const SignUp = () => {
                 >
                   <img
                     style={{ width: "25px", height: "25px" }}
-                    // src={googleLogo}
+                    src={googleLogo}
                     className="img-fluid"
                     alt=""
                   />{" "}
@@ -107,12 +114,10 @@ const SignUp = () => {
                 Sign In
               </a>
             </p>
-            <img
-              src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?w=740&t=st=1659710327~exp=1659710927~hmac=61c9618e3381ffe9a9d6ce52cda28050bfa8491f09ebf3feb7a2631cdafac674"
-              className="img-fluid"
-              alt=""
-            />
-            <p style={{ fontSize: "11px" }}>
+            <div className="d-flex justify-content-evenly">
+              <img src={loginImg} className="img-fluid" alt="" />
+            </div>
+            <p style={{ fontSize: "11px" }} className="mt-5">
               By signing up, you agree to our Terms & conditions, Privacy policy
             </p>
           </div>
