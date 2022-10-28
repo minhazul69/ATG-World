@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import facebookLogo from "../../../Image/f_logo_RGB-Blue_1024.png";
 import googleLogo from "../../../Image/google.svg";
 import loginImg from "../../../Image/login-img.png";
 
 const SignUp = () => {
+  const [showPass, setShowPass] = useState(false);
   return (
     <div class="modal-content">
       <div class="modal-header modal-bg">
@@ -50,17 +51,34 @@ const SignUp = () => {
               <div className="position-relative">
                 <input
                   className="form-control shadow-none rounded-0"
-                  type="password"
+                  type={showPass ? "text" : "password"}
                   placeholder="Password"
                   required
                 />
-                <i
-                  style={{ top: 20, right: 25, transform: "translateY(-50%)" }}
-                  className="fa-solid fa-eye swap-off position-absolute d-block "
-                ></i>
+                {showPass ? (
+                  <i
+                    onClick={() => setShowPass(false)}
+                    style={{
+                      top: 20,
+                      right: 25,
+                      transform: "translateY(-50%)",
+                    }}
+                    className="fa-solid fa-eye-low-vision position-absolute d-block cursor-pointer"
+                  ></i>
+                ) : (
+                  <i
+                    onClick={() => setShowPass(true)}
+                    style={{
+                      top: 20,
+                      right: 25,
+                      transform: "translateY(-50%)",
+                    }}
+                    className="fa-solid fa-eye swap-off position-absolute d-block cursor-pointer "
+                  ></i>
+                )}
               </div>
               <input
-                type="password"
+                type={showPass ? "text" : "password"}
                 class="form-control shadow-none rounded-0"
                 placeholder="Confirm Password"
                 aria-label="Server"
