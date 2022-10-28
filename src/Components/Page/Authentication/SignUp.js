@@ -23,7 +23,9 @@ const SignUp = () => {
       <div class="modal-body">
         <div className="row">
           <div className="col-md-6">
-            <h4 className="font-weight-bold mb-4">Create Account</h4>
+            <h4 style={{ fontWeight: "bold" }} className=" mb-4">
+              Create Account
+            </h4>
             <form action="#">
               <div class="input-group">
                 <input
@@ -40,7 +42,7 @@ const SignUp = () => {
                 />
               </div>
               <input
-                type="text"
+                type="email"
                 class="form-control shadow-none rounded-0"
                 placeholder="Email"
                 aria-label="Server"
@@ -105,7 +107,7 @@ const SignUp = () => {
                 marginRight: "20px",
               }}
             >
-              Already have an account?
+              Already have an account?{" "}
               <a
                 href="/signIn"
                 data-bs-toggle="modal"

@@ -1,18 +1,15 @@
 import React from "react";
 import facebookLogo from "../../../Image/f_logo_RGB-Blue_1024.png";
 import googleLogo from "../../../Image/google.svg";
+import loginImg from "../../../Image/login-img.png";
 const SignIn = () => {
   return (
     <div class="modal-content">
       <div class="modal-header modal-bg">
         <div className="mx-auto">
           <h5 class=" b" id="exampleModalLabel">
-            {/* Let's learn, share & inspire each other with our passion for
-            computer engineering. Sign up now 🤘🏼 */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            minus, sed ab cum ipsam odit quam fugiat laudantium repudiandae
-            dolorem corporis autem, libero magni atque. Obcaecati provident
-            consequatur incidunt debitis!
+            Let's learn, share & inspire each other with our passion for
+            computer engineering. Sign up now 🤘🏼
           </h5>
         </div>
         <button
@@ -25,50 +22,36 @@ const SignIn = () => {
       <div class="modal-body">
         <div className="row">
           <div className="col-md-6">
-            <h4 className="font-weight-bold mb-4">Create Account</h4>
+            <h4 style={{ fontWeight: "bold" }} className=" mb-4">
+              Sign In
+            </h4>
             <form action="#">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control shadow-none"
-                  placeholder="First Name"
-                  aria-label="Username"
-                />
-                <input
-                  type="text"
-                  class="form-control shadow-none"
-                  placeholder="Last Name"
-                  aria-label="Server "
-                />
-              </div>
               <input
-                type="text"
-                class="form-control shadow-none"
+                type="email"
+                class="form-control shadow-none rounded-0"
                 placeholder="Email"
                 aria-label="Server"
               />
-              <input
-                type="text"
-                class="form-control shadow-none mt-2"
-                placeholder="Password"
-                aria-label="Server"
-              />
-
-              <input
-                type="text"
-                class="form-control shadow-none mt-2"
-                placeholder="Confirm Password"
-                aria-label="Server"
-              />
-
+              <div className="position-relative">
+                <input
+                  className="form-control shadow-none rounded-0"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <i
+                  style={{ top: 20, right: 25, transform: "translateY(-50%)" }}
+                  className="fa-solid fa-eye swap-off position-absolute d-block "
+                ></i>
+              </div>
               <button
-                class="btn btn-primary w-100 mt-2 rounded-pill py-2"
+                class="btn btn-primary w-100 mt-3 rounded-pill py-2"
                 type="button"
               >
                 Create Account
               </button>
               <br />
-              <div className="mt-3">
+              <div className="mt-3 text-center">
                 <button type="button" class="btn btn-light w-100 border">
                   <img
                     src={facebookLogo}
@@ -81,7 +64,7 @@ const SignIn = () => {
                 <br />
                 <button
                   type="button w-100"
-                  class="btn btn-light  w-100 mt-2 border"
+                  class="btn btn-light  w-100 mt-2 mb-3 border"
                 >
                   <img
                     style={{ width: "25px", height: "25px" }}
@@ -91,6 +74,14 @@ const SignIn = () => {
                   />{" "}
                   Sign Up With Facebook
                 </button>
+                <br />
+                <a
+                  style={{ fontWeight: 600, color: "black" }}
+                  href="#"
+                  className=" text-decoration-none "
+                >
+                  Forgot Password?
+                </a>
               </div>
             </form>
           </div>
@@ -102,23 +93,16 @@ const SignIn = () => {
                 marginRight: "20px",
               }}
             >
-              Already have an account?
+              Don’t have an account yet?{" "}
               <a
                 href="/signIn"
                 data-bs-toggle="modal"
                 data-bs-target="#signUpModal"
               >
-                Sign Up
+                Create new for free!
               </a>
             </p>
-            <img
-              src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?w=740&t=st=1659710327~exp=1659710927~hmac=61c9618e3381ffe9a9d6ce52cda28050bfa8491f09ebf3feb7a2631cdafac674"
-              className="img-fluid"
-              alt=""
-            />
-            <p style={{ fontSize: "11px" }}>
-              By signing up, you agree to our Terms & conditions, Privacy policy
-            </p>
+            <img src={loginImg} className="img-fluid" alt="" />
           </div>
         </div>
       </div>
