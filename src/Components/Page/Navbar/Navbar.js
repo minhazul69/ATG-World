@@ -31,7 +31,7 @@ const Navbar = () => {
           <h6
             className="cursor-pointer"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#signUpModal"
           >
             Create account. <a href="#"> It’s free!</a>{" "}
             <i class="fa-solid fa-caret-down"></i>

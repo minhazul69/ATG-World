@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import facebookLogo from "../../../Image/f_logo_RGB-Blue_1024.png";
-import googleLogo from "../../../Image/google.svg";
+import SignIn from "../Authentication/SignIn";
+import SignUp from "../Authentication/SignUp";
 import "./AllPost.css";
 const allPost = [
   {
@@ -214,132 +214,31 @@ const AllPost = () => {
                 <a href="" id="post-now">
                   <i class="fa-solid fa-pen"></i>
                 </a>
-
+                {/* SIGN UP MODAL */}
                 <div
                   class="modal fade"
-                  id="exampleModal"
+                  id="signUpModal"
                   tabindex="-1"
-                  aria-labelledby="exampleModalLabel"
+                  aria-labelledby="signUpModalLabel"
                   aria-hidden="true"
                 >
                   <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header modal-bg">
-                        <div className="mx-auto">
-                          <h5 class=" b" id="exampleModalLabel">
-                            Let's learn, share & inspire each other with our
-                            passion for computer engineering. Sign up now 🤘🏼
-                          </h5>
-                        </div>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div className="row">
-                          <div className="col-md-6">
-                            <h4 className="font-weight-bold mb-4">
-                              Create Account
-                            </h4>
-                            <form action="#">
-                              <div class="input-group mb-3">
-                                <input
-                                  type="text"
-                                  class="form-control shadow-none"
-                                  placeholder="First Name"
-                                  aria-label="Username"
-                                />
-                                <input
-                                  type="text"
-                                  class="form-control shadow-none"
-                                  placeholder="Last Name"
-                                  aria-label="Server "
-                                />
-                              </div>
-                              <input
-                                type="text"
-                                class="form-control shadow-none"
-                                placeholder="Email"
-                                aria-label="Server"
-                              />
-                              <input
-                                type="text"
-                                class="form-control shadow-none mt-2"
-                                placeholder="Password"
-                                aria-label="Server"
-                              />
-
-                              <input
-                                type="text"
-                                class="form-control shadow-none mt-2"
-                                placeholder="Confirm Password"
-                                aria-label="Server"
-                              />
-
-                              <button
-                                class="btn btn-primary w-100 mt-2 rounded-pill py-2"
-                                type="button"
-                              >
-                                Create Account
-                              </button>
-                              <br />
-                              <div className="mt-3">
-                                <button
-                                  type="button"
-                                  class="btn btn-light w-100 border"
-                                >
-                                  <img
-                                    src={facebookLogo}
-                                    style={{ width: "25px", height: "25px" }}
-                                    className="img-fluid"
-                                    alt=""
-                                  />{" "}
-                                  Sign Up With Facebook
-                                </button>
-                                <br />
-                                <button
-                                  type="button w-100"
-                                  class="btn btn-light  w-100 mt-2 border"
-                                >
-                                  <img
-                                    style={{ width: "25px", height: "25px" }}
-                                    src={googleLogo}
-                                    className="img-fluid"
-                                    alt=""
-                                  />{" "}
-                                  Sign Up With Facebook
-                                </button>
-                              </div>
-                            </form>
-                          </div>
-                          <div className="col-md-6">
-                            <p
-                              style={{
-                                fontSize: "13px",
-                                textAlign: "right",
-                                marginRight: "20px",
-                              }}
-                            >
-                              Already have an account? <a href="#">Sign In</a>
-                            </p>
-                            <img
-                              src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?w=740&t=st=1659710327~exp=1659710927~hmac=61c9618e3381ffe9a9d6ce52cda28050bfa8491f09ebf3feb7a2631cdafac674"
-                              className="img-fluid"
-                              alt=""
-                            />
-                            <p style={{ fontSize: "11px" }}>
-                              By signing up, you agree to our Terms &
-                              conditions, Privacy policy
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <SignUp />
                   </div>
                 </div>
+                {/* SIGN IN MODAL */}
+                <div
+                  class="modal fade"
+                  id="signInModal"
+                  tabindex="-1"
+                  aria-labelledby="signInModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <SignIn />
+                  </div>
+                </div>
+
                 <div className="pt-4 pb-1 d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center">
                     <img src={post.postUserImg} className="img-fluid" alt="" />
